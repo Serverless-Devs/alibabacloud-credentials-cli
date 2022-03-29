@@ -246,15 +246,11 @@ module.exports = class {
       const code = await onExit(child);
       process.exit(code);
     } else {
-      console.log(`export ALIBABACLOUD_ACCESS_KEY_ID=${credential.getAccessKeyId()}`);
-      console.log(`export ALICLOUD_ACCESS_KEY_ID=${credential.getAccessKeyId()}`);
-      console.log(`export ALIBABACLOUD_ACCESS_KEY_SECRET=${credential.getAccessKeySecret()}`);
-      console.log(`export ALICLOUD_ACCESS_KEY_SECRET=${credential.getAccessKeySecret()}`);
-      if (credential.getSecurityToken()) {
-        console.log(`export ALIBABACLOUD_SECURITY_TOKEN=${credential.getSecurityToken()}`);
-        console.log(`export ALICLOUD_SECURITY_TOKEN=${credential.getSecurityToken()}`);
-        console.log(`export SECURITY_TOKEN=${credential.getSecurityToken()}`);
-      }
+      return {
+        AccessKeyID: credential.getAccessKeyId(),
+        AccessKeySecret: credential.getAccessKeySecret(),
+        SecurityToken: credential.getSecurityToken()
+      };
     }
   }
 };
