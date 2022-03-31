@@ -1,6 +1,6 @@
 {
   "name": "@serverless-devs/acc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alibaba Cloud Credentials CLI",
   "bin": {
     "acc": "bin/acc.js"
@@ -21,7 +21,7 @@
   "author": "Jackson Tian",
   "license": "Apache License 2.0",
   "dependencies": {
-    "@alicloud/credentials": "^2.2.0"
+    "@serverless-devs/credentials": "^2.2.1"
   },
   "devDependencies": {
     "eslint": "^8.7.0",

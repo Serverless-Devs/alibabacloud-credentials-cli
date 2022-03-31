@@ -4,7 +4,7 @@ const { parse } = require('../lib/parser');
 
 const { spawn, exec } = require('child_process');
 const { loadConfig, loadProfile, loadCurrentProfile } = require('../lib/profile');
-const { default: Credential, Config } = require('@alicloud/credentials');
+const { default: Credential, Config } = require('@serverless-devs/credentials');
 
 function onExit(cp) {
   return new Promise((resolve) => {
